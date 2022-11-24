@@ -30,9 +30,7 @@ export class FoodService {
     return [
       {
         id: 1,
-        name: 'Pizza Pepperoni',
-        cookTime: '10-20',
-        price: 10,
+        name: 'Test',
         favorite: false,
         origins: ['italy'],
         stars: 4,
@@ -42,9 +40,7 @@ export class FoodService {
       },
       {
         id: 2,
-        name: 'Hrira',
-        price: 20,
-        cookTime: '20-30',
+        name: 'Test',
         favorite: true,
         origins: ['Algeria'],
         stars: 3,
@@ -54,9 +50,7 @@ export class FoodService {
       },
       {
         id: 3,
-        name: 'Hamburger',
-        price: 5,
-        cookTime: '10-15',
+        name: 'Test',
         favorite: false,
         origins: ['germany', 'us'],
         stars: 5,
@@ -66,9 +60,7 @@ export class FoodService {
       },
       {
         id: 4,
-        name: 'Fried Potatoes',
-        price: 2,
-        cookTime: '15-20',
+        name: 'Test',
         favorite: true,
         origins: ['belgium', 'france'],
         stars: 1,
@@ -78,11 +70,9 @@ export class FoodService {
       },
       {
         id: 5,
-        name: 'Chicken Soup',
-        price: 11,
-        cookTime: '40-50',
+        name: 'Test',
         favorite: false,
-        origins: ['india', 'asia'],
+        origins: [],
         stars: 2,
         imageUrl: '/assets/images/chorba.jpg',
         tags: ['SlowFood', 'Soup'],
@@ -90,9 +80,7 @@ export class FoodService {
       },
       {
         id: 6,
-        name: 'Vegetables Pizza',
-        price: 9,
-        cookTime: '40-50',
+        name: 'Test',
         favorite: false,
         origins: ['italy'],
         stars: 4.0,
