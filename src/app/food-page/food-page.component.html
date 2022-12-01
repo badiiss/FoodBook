@@ -1,0 +1,27 @@
+<div class="container">
+    <img [src]="food.imageUrl" [alt] = "food.name">
+
+    <div class="details">
+        <div class="header">
+            <span class="name">
+                {{food.name}}
+            </span>
+        <div class="author">
+           Auteur : <b>{{food.auteur}}</b> 
+        </div>
+        </div>
+        <div class="comments">
+            <span *ngFor="let comments of food.comments">
+            {{comments}}
+            </span>
+            <div> <input type="text">
+                <button>Commenter</button></div>
+           
+        </div>
+        <div class="tags">
+            <app-tags [foodPageTags]></app-tags>
+        </div>
+        
+        
+    </div>
+</div>

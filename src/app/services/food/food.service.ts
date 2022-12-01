@@ -7,6 +7,11 @@ import { Tag } from 'src/app/shared/models/Tags';
 export class FoodService {
 
   constructor() { }
+
+  getFoodById(id: number): Food{
+    return this.getAll().find(food => food.id == id)!;
+  }
+
   getAllFoodsByTag(tag: string): Food[] {
     return tag == "All" ?
       this.getAll() :
@@ -16,13 +21,13 @@ export class FoodService {
   getAllTags(): Tag[] {
     return [
       { name: 'All', count: 14 },
-      { name: 'FastFood', count: 4 },
-      { name: 'Pizza', count: 2 },
-      { name: 'Lunch', count: 3 },
-      { name: 'SlowFood', count: 2 },
-      { name: 'Hamburger', count: 1 },
-      { name: 'Fry', count: 1 },
-      { name: 'Soup', count: 1 },
+      { name: 'Tag1', count: 4 },
+      { name: 'Tag2', count: 2 },
+      { name: 'Tag3', count: 3 },
+      { name: 'Tag4', count: 2 },
+      { name: 'Tag5', count: 1 },
+      { name: 'Tag6', count: 1 },
+      { name: 'Tag7', count: 1 },
     ];
   }
 
@@ -30,17 +35,18 @@ export class FoodService {
     return [
       {
         id: 1,
-        name: 'Test',
+        name: 'Pizza',
         favorite: false,
         origins: ['italy'],
         stars: 4,
         imageUrl: '/assets/images/3dess.jpg',
         tags: ['FastFood', 'Pizza', 'Lunch'],
         auteur: 'badis',
+        comments :['super', 'cest nul']
       },
       {
         id: 2,
-        name: 'Test',
+        name: 'Soupe',
         favorite: true,
         origins: ['Algeria'],
         stars: 3,
@@ -50,7 +56,7 @@ export class FoodService {
       },
       {
         id: 3,
-        name: 'Test',
+        name: 'Couscous',
         favorite: false,
         origins: ['germany', 'us'],
         stars: 5,
@@ -60,7 +66,7 @@ export class FoodService {
       },
       {
         id: 4,
-        name: 'Test',
+        name: 'Gratin',
         favorite: true,
         origins: ['belgium', 'france'],
         stars: 1,
