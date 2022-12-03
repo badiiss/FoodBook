@@ -38,8 +38,18 @@ public hasRole(role : string):boolean {
 }
 
 public isAuthentificated (){
-  return this.authentficatedUser!=undefined;
+  return this.authentficatedUser != undefined;
 }
+  public getUsername() {
+    return this.authentficatedUser?.username;
+  }
+
+  public logOut() : Observable<boolean>{
+    this.authentficatedUser = undefined;
+    localStorage.removeItem("authUser");
+    return of(true);
+
+  }
 
   }
 
