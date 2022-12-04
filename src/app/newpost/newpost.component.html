@@ -1,0 +1,26 @@
+<p>newpost works!</p>
+
+<div class="container mt-3 col-md-6 offset-md-3"> 
+<form [formGroup]="postFormGroup" >
+    <div class="mb-3">
+        <label for="" class="form-label">Title : </label>
+        <input type="text" formControlName="name" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label" > Description : </label>
+        <input type="text" formControlName="description" class="form-control" style="height: 100px;">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Tags : </label>
+        <input type="text" formControlName="tags" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Orignes : </label>
+        <input type="text" formControlName="origins" class="form-control" >
+    </div>
+    <button class="btn btn-outline-success" type="submit">Save</button>
+</form>
+
+
+
+</div>

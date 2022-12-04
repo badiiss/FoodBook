@@ -1,4 +1,9 @@
 <div>
-    <input type="text" placeholder="Search" [(ngModel)]="searchTerm" (change)="search()">
+    
+    <ng-container *ngIf="authservice.isAuthentificated()">
+    <button  id="add" (click)="add()"> Add a new post</button></ng-container>
+    
+    <input [ngClass]="{'conn':authservice.isAuthentificated(),'disc':!authservice.isAuthentificated() }"  type="text" placeholder="Search" [(ngModel)]="searchTerm" (change)="search()">
     <button (click)="search()">Search</button>
 </div>
+

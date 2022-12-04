@@ -11,6 +11,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { TagsComponent } from './tags/tags.component';
 import { FoodPageComponent } from './food-page/food-page.component';
 import { LoginComponent } from './login/login.component';
+import { NewpostComponent } from './newpost/newpost.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LoginComponent } from './login/login.component';
     SearchComponent,
     TagsComponent,
     FoodPageComponent,
-    LoginComponent
+    LoginComponent,
+    NewpostComponent
   ],
   imports: [
     BrowserModule,

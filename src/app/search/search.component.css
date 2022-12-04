@@ -4,9 +4,22 @@ div {
     margin-top: 3rem;
     margin-bottom: 1.5rem;
 }
+.conn {
+    
+         /*   border-radius: 10rem 0 0 10rem;*/
+            border: none;
+            height: 3rem;
+            width: 20rem;
+            background-color: #f1f1f1;
+            padding: 1.2rem;
+            font-size: 1rem;
+            font-weight: 500;
+            outline: none;
+        
+}
 
-div input {
-    border-radius: 10rem 0 0 10rem;
+.disc {
+   border-radius: 10rem 0 0 10rem;
     border: none;
     height: 3rem;
     width: 20rem;
@@ -15,6 +28,11 @@ div input {
     font-size: 1rem;
     font-weight: 500;
     outline: none;
+}
+input::placeholder {
+    font-weight: bold;
+    opacity: .5;
+    position: center;
 }
 
 div button {
@@ -28,6 +46,9 @@ div button {
     color: white;
     opacity: .5;
     outline: none;
+}
+#add {
+    border-radius: 10rem 0 0 10rem;
 }
 
 div button:hover {
