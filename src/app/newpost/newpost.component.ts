@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FoodService } from '../services/food/food.service';
 
 @Component({
   selector: 'app-newpost',
@@ -10,7 +11,7 @@ export class NewpostComponent implements OnInit {
 
   postFormGroup!: FormGroup;
 
-  constructor(private fb : FormBuilder) { }
+  constructor(private fb : FormBuilder , private foodservice : FoodService) { }
 
   ngOnInit(): void {
     this.postFormGroup = this.fb.group({
@@ -23,6 +24,19 @@ export class NewpostComponent implements OnInit {
     })
       
     
+  }
+
+  handleAddnewPost() {
+    let post = this.postFormGroup.value;
+    this.foodservice.addNewPost(post).subscribe({
+      next: () => {
+        alert("Poste Publié");
+        this.postFormGroup.reset;
+      }, error: err => {
+        
+      }
+    })
+    console.log(this.postFormGroup.value);
   }
 
 }

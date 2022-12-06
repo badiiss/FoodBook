@@ -1,27 +1,39 @@
 <div class="container">
-    <img [src]="food.imageUrl" [alt] = "food.name">
+    <img [src]="food.imageUrl" [alt]="food.name">
 
     <div class="details">
         <div class="header">
             <span class="name">
                 {{food.name}}
+                
             </span>
-        <div class="author">
-           Auteur : <b>{{food.auteur}}</b> 
+            <div class="author">
+                Auteur : <b>{{food.auteur}}</b>
+            <button id="supp" *ngIf="authservice.isAuthentificated()" (click)="handleDelete()">Supprimer le post </button>
+
+            </div>
         </div>
+        <div>
+
+        </div>
+        <div>
+
         </div>
         <div class="comments">
-            <span *ngFor="let comments of food.comments">
-            {{comments}}
-            </span>
+            
             <div> <input type="text">
-                <button>Commenter</button></div>
-           
+                <button>Commenter</button>
+            </div>
+            <span *ngFor="let comments of food.comments">
+                {{comments}}
+            </span>
+
+
         </div>
         <div class="tags">
             <app-tags [foodPageTags]></app-tags>
         </div>
-        
-        
+
+
     </div>
 </div>

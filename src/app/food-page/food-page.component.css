@@ -36,6 +36,11 @@ img{
     font-weight: bold;
 }
 
+#id {
+    height: 3rem;
+        width: 3rem;
+        border-radius: 10rem 10rem 10rem 10rem;
+}
 .details button{
     color:grey;
     height: 3rem;
@@ -64,4 +69,9 @@ div input {
 .details button:hover{
     opacity: .9;
     cursor: pointer;
+}
+
+.comments {
+    margin-top: 100px;
+    margin-bottom: 100px;;
 }
