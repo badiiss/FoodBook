@@ -32,10 +32,10 @@ localStorage.setItem("authUser",JSON.stringify({username:user.username, roles : 
 return of(true);
 }
 
-
+/*
 public hasRole(role : string):boolean {
  return this.authentficatedUser!.roles.includes(role);
-}
+}*/
 
 public isAuthentificated (){
   return this.authentficatedUser != undefined;
@@ -49,6 +49,12 @@ public isAuthentificated (){
     localStorage.removeItem("authUser");
     return of(true);
 
+  }
+
+  public register(user: User ) : Observable<User>{
+    this.users.push(user);
+    console.log(this.users);
+    return of(user)
   }
 
   }

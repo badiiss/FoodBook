@@ -1,7 +1,11 @@
+import { Food } from "./Food";
+
 export class User {
-    userId! : string;
+    userId?: string;
+    name?: string;
+    surname?: string;
     username!:string;
     password!: string;
     picture?: string;
-    roles! : String[];
+    roles?: String[];
 }

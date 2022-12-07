@@ -1,22 +1,29 @@
 <div class="container">
     <div class="col-md-6 offset-3">
         <div class="card">
-            <div class="card-header">Authentification</div>
+            <!-- LOGIIIIIIIIIIIIIIIIIN-->
+            <div class="card-header">
+                <label id="label">Authentification</label> 
+               
+            </div>
             <div class="text-danger" *ngIf="errorMessage">{{errorMessage}}</div>
             <div class="card-body">
-                
+               
                 <form [formGroup]="userFormGroup" (ngSubmit)="handleLogin()">
                     <div class="mb-3">
-                        <label class="form-label">UserName</label>
+                        <label class="form-label">Pseudo</label>
                         <input type="text" formControlName="username" class="form-control">
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Password</label>
+                        <label class="form-label">Mot de passe</label>
                         <input type="password" formControlName="password" class="form-control">
                     </div>
-                    <button [disabled]="!userFormGroup.valid" class="btn btn-primary">Login</button>
+                    <button [disabled]="!userFormGroup.valid" class="btn btn-primary btn-lg btn-block" >Login</button>
                 </form>
+             
             </div>
+            </div>
+
+            
         </div>
     </div>
-</div>

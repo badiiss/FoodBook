@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="com">
+        <p>Commentaires : </p>
+        <input [(ngModel)]= "comment">
+        <button (click)="post()">Commenter</button>
+        </div>
+   
+   
+<div *ngFor="let comment of postComment">
+<li>{{comment}}</li>
+</div>
+
+
+
+</div>

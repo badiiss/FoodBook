@@ -8,8 +8,8 @@
             <li>
                 
                 <a *ngIf="!authservice.isAuthentificated()"href="#" routerLink="/login"> Se connecter</a>
-                
-                <a href="#" >Profil</a>
+                <a *ngIf="!authservice.isAuthentificated()" href="#" routerLink="/register"> S'inscrire</a>
+                <a *ngIf="authservice.isAuthentificated()" href="#" >Profil</a>
                 <a href="#" routerLink="/plats"> Posts </a>
                 <a *ngIf="authservice.isAuthentificated()" href="#"> {{authservice.authentficatedUser!.username}}</a>
                 <a *ngIf="authservice.isAuthentificated()" (click)="handleLogout()">

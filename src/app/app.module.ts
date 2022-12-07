@@ -12,6 +12,8 @@ import { TagsComponent } from './tags/tags.component';
 import { FoodPageComponent } from './food-page/food-page.component';
 import { LoginComponent } from './login/login.component';
 import { NewpostComponent } from './newpost/newpost.component';
+import { RegisterComponent } from './register/register.component';
+import { CommentsComponent } from './comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { NewpostComponent } from './newpost/newpost.component';
     TagsComponent,
     FoodPageComponent,
     LoginComponent,
-    NewpostComponent
+    NewpostComponent,
+    RegisterComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,

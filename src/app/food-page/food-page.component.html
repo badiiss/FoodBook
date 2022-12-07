@@ -1,10 +1,11 @@
+
 <div class="container">
     <img [src]="food.imageUrl" [alt]="food.name">
 
     <div class="details">
         <div class="header">
             <span class="name">
-                {{food.name}}
+                {{food.name}} par {{food.auteur}}
                 
             </span>
             <div class="author">
@@ -13,26 +14,18 @@
 
             </div>
         </div>
-        <div>
 
-        </div>
         <div>
-
-        </div>
-        <div class="comments">
-            
-            <div> <input type="text">
-                <button>Commenter</button>
-            </div>
-            <span *ngFor="let comments of food.comments">
-                {{comments}}
+            <span>
+            {{food.description}}
             </span>
-
+            <app-comments></app-comments>
+        </div>
+        <div>
 
         </div>
-        <div class="tags">
-            <app-tags [foodPageTags]></app-tags>
-        </div>
+        
+      
 
 
     </div>

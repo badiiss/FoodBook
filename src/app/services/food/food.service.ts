@@ -20,7 +20,9 @@ export class FoodService {
         imageUrl: '/assets/images/3dess.jpg',
         tags: ['FastFood', 'Pizza', 'Lunch'],
         auteur: 'badis',
-        comments :['super', 'cest nul']
+        comments: ['super', 'cest nul'],
+                description: 'Nam velit metus, rutrum et vehicula in, aliquet nec orci. Vivamus maximus, tortor in dictum congue, tortor lorem varius magna, quis fringilla neque enim a risus. Duis mattis leo elit, non congue lacus accumsan in. Sed semper felis condimentum enim efficitur, vitae vulputate nisi ullamcorper.',
+
       },
       {
         id: 2,
@@ -31,6 +33,7 @@ export class FoodService {
         imageUrl: '/assets/images/chorba.jpg',
         tags: ['SlowFood', 'Lunch'],
         auteur: 'tebboune',
+        description: 'Nam velit metus, rutrum et vehicula in, aliquet nec orci. Vivamus maximus, tortor in dictum congue, tortor lorem varius magna, quis fringilla neque enim a risus. Duis mattis leo elit, non congue lacus accumsan in. Sed semper felis condimentum enim efficitur, vitae vulputate nisi ullamcorper.',
       },
       {
         id: 3,
@@ -41,6 +44,8 @@ export class FoodService {
         imageUrl: '/assets/images/3dess.jpg',
         tags: ['FastFood', 'Hamburger'],
         auteur: 'messi',
+        description: 'Nam velit metus, rutrum et vehicula in, aliquet nec orci. Vivamus maximus, tortor in dictum congue, tortor lorem varius magna, quis fringilla neque enim a risus. Duis mattis leo elit, non congue lacus accumsan in. Sed semper felis condimentum enim efficitur, vitae vulputate nisi ullamcorper.',
+
       },
       {
         id: 4,
@@ -51,6 +56,8 @@ export class FoodService {
         imageUrl: '/assets/images/chorba.jpg',
         tags: ['FastFood', 'Fry'],
         auteur: 'giroud',
+        description: 'Nam velit metus, rutrum et vehicula in, aliquet nec orci. Vivamus maximus, tortor in dictum congue, tortor lorem varius magna, quis fringilla neque enim a risus. Duis mattis leo elit, non congue lacus accumsan in. Sed semper felis condimentum enim efficitur, vitae vulputate nisi ullamcorper.',
+
       },
       {
         id: 5,
@@ -60,7 +67,9 @@ export class FoodService {
         stars: 2,
         imageUrl: '/assets/images/chorba.jpg',
         tags: ['SlowFood', 'Soup'],
-        auteur :'anis'
+        auteur: 'anis',
+                description: 'Nam velit metus, rutrum et vehicula in, aliquet nec orci. Vivamus maximus, tortor in dictum congue, tortor lorem varius magna, quis fringilla neque enim a risus. Duis mattis leo elit, non congue lacus accumsan in. Sed semper felis condimentum enim efficitur, vitae vulputate nisi ullamcorper.',
+
       },
       {
         id: 6,
@@ -71,7 +80,9 @@ export class FoodService {
         imageUrl: '/assets/images/3dess.jpg',
         tags: ['FastFood', 'Pizza', 'Lunch'],
         auteur: 'maguire',
-        comments : ['good', 'pas good']
+        comments: ['good', 'pas good'],
+                description: 'Nam velit metus, rutrum et vehicula in, aliquet nec orci. Vivamus maximus, tortor in dictum congue, tortor lorem varius magna, quis fringilla neque enim a risus. Duis mattis leo elit, non congue lacus accumsan in. Sed semper felis condimentum enim efficitur, vitae vulputate nisi ullamcorper.',
+
       },
       {
         id: 8,
@@ -82,6 +93,8 @@ export class FoodService {
         imageUrl: '',
         tags: ['FastFood', 'Pizza', 'Lunch'],
         auteur: 'maguire',
+                description: 'Nam velit metus, rutrum et vehicula in, aliquet nec orci. Vivamus maximus, tortor in dictum congue, tortor lorem varius magna, quis fringilla neque enim a risus. Duis mattis leo elit, non congue lacus accumsan in. Sed semper felis condimentum enim efficitur, vitae vulputate nisi ullamcorper.',
+
       },
       
     ]
