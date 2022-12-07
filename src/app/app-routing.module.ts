@@ -4,6 +4,7 @@ import { AdminComponent } from './admin/admin.component';
 import { FoodPageComponent } from './food-page/food-page.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { MessagerieComponent } from './messagerie/messagerie.component';
 import { NewpostComponent } from './newpost/newpost.component';
 import { RegisterComponent } from './register/register.component';
 
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'food/:id', component: FoodPageComponent },
   { path: 'newpost', component: NewpostComponent },
   { path: 'register', component: RegisterComponent },
-  {path : 'admin' , component :AdminComponent}
+  { path: 'admin', component: AdminComponent },
+  {path : 'inbox', component: MessagerieComponent}
 ];
 
 

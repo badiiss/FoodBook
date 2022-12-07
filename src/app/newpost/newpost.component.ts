@@ -15,6 +15,7 @@ export class NewpostComponent implements OnInit {
 
   ngOnInit(): void {
     this.postFormGroup = this.fb.group({
+      id: Math.floor(Math.random() * 100),
       name: this.fb.control("", Validators.required),
       description: this.fb.control("", Validators.required),
       tags : this.fb.control([]),

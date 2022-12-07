@@ -10,7 +10,8 @@
      </div>
 
         <div *ngFor="let comment of postComment">
-            <li> {{comment.auteur}}  : {{comment.content}}</li>
+            <li> {{comment.auteurCom}}  : {{comment.content}} </li>  
+            <button *ngIf="authService.isAuthentificated() && canDeleteComment()" class="btn btn-danger">Supprimer</button>
         </div>
         </div>
 </div>

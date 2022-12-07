@@ -1,5 +1,15 @@
+.container {
+    margin-top: 3rem;
+}
+#titre{
+    margin-top: 2rem;
+    text-align: center;
+}
+
 details {
+    
     border: 1px solid #aaa;
     border-radius: 4px;
     padding: .5em .5em 0;
 }
+

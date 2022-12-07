@@ -15,6 +15,7 @@ import { NewpostComponent } from './newpost/newpost.component';
 import { RegisterComponent } from './register/register.component';
 import { CommentsComponent } from './comments/comments.component';
 import { AdminComponent } from './admin/admin.component';
+import { MessagerieComponent } from './messagerie/messagerie.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AdminComponent } from './admin/admin.component';
     NewpostComponent,
     RegisterComponent,
     CommentsComponent,
-    AdminComponent
+    AdminComponent,
+    MessagerieComponent
   ],
   imports: [
     BrowserModule,

@@ -11,7 +11,7 @@ export class AuthentificationService {
   users : User[]=[];
   authentficatedUser? : User ;
   constructor() { 
-    this.users.push({userId: UUID.UUID(), username:"badis",password:"badis",roles : ["user","admin"]});
+    this.users.push({userId: UUID.UUID(), username:"Badis",password:"badis",roles : ["user","admin"]});
     this.users.push({userId: UUID.UUID(), username:"anis",password:"badis",roles : ["user"]});
     this.users.push({ userId: UUID.UUID(), username: "hicham", password: "badis", roles: ["user"] });
     this.users.push({ userId: UUID.UUID(), username: "ion", password: "badis", roles: ["user"] });
@@ -31,7 +31,9 @@ export class AuthentificationService {
   return throwError(()=> new Error("Mot de passe erroné"));
  }return of(user); 
 
-}
+  }
+  
+  
 
 public authentficateUser(user:User):Observable<boolean>{
 this.authentficatedUser=user;
@@ -40,7 +42,7 @@ return of(true);
 }
 
 
-  public hasRole(role: string): boolean {
+  public hasRole(role: string): boolean { // Pour verfifier si le user connecté à un role ou non pour avoir acces à certains fonctionnalité
     if (this.authentficatedUser?.roles) {
      return this.authentficatedUser.roles.includes(role);
     }
@@ -50,6 +52,7 @@ return of(true);
 public isAuthentificated (){
   return this.authentficatedUser != undefined;
 }
+  // un methode intermediaire pour verifier si lauteur du post et qui est connecté
   public getUsername() {
     return this.authentficatedUser?.username;
   }

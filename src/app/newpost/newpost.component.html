@@ -22,6 +22,10 @@
         <label for="" class="form-label">Orignes : </label>
         <input type="text" formControlName="origins" class="form-control" >
     </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Photo : </label>
+        <input type="file" formControlName="imageUrl" class="form-control">
+    </div>
     <button [disabled]="!postFormGroup.valid" class="btn btn-outline-success" type="submit">Save</button>
 </form>
 

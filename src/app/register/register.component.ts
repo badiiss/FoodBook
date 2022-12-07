@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UUID } from 'angular2-uuid';
 import { AuthentificationService } from '../services/authentification.service';
 import { User } from '../shared/models/User';
 @Component({
@@ -15,6 +16,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.registerFormGroup = this.fb.group({
+      id: UUID,
       username: [null, [Validators.required]],
       name: [null, [Validators.required]],
       surname: [null, [Validators.required]],

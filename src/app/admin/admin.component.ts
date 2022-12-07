@@ -14,6 +14,7 @@ export class AdminComponent implements OnInit {
   foods: Food[] = [];
   users: User[] = [];
   food!: Food;
+  user!: User;
   constructor(private router:Router,private foodService:FoodService , private route:ActivatedRoute, private authService:AuthentificationService) { }
 
   ngOnInit(): void {
@@ -32,6 +33,20 @@ export class AdminComponent implements OnInit {
         this.router.navigateByUrl("/admin")
       }
     })
+  }
+
+  handleDeleteUser(user: User) {
+    console.log(this.users);
+    let index = this.users.indexOf(user);
+    this.users.splice(index, 1);
+    alert("Utilsateur Supprimé");
+    console.log(this.users);/*
+    this.foodService.deletPost(user.username).subscribe({
+      next: () => {
+        alert("Post Supprimé")
+        this.router.navigateByUrl("/admin")
+      }
+    })*/
   }
 
 }

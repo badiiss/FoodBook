@@ -1,0 +1,28 @@
+<div class="container">
+
+        <div class="card">
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Auteur</th>
+                            <th>Message</th>
+                            <th>Date de reception</th>
+                            <th>Repondre</th>
+                            <th>Supprimer</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let food of messages ">
+                            <td>{{food.sender}}</td>
+                            <td>{{food.content}}</td>
+                            <td>{{food.date}}</td>
+                            <td><button class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
+                            <td><button class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+

@@ -1,4 +1,7 @@
-<p>admin works!</p>
+
+<div id="titre" class="container"> 
+    <h3>Admin dashboard </h3> </div>
+
 <div class="container">
     <details open>
         <summary>Publicatins</summary>
@@ -15,7 +18,7 @@
                         <td>{{food.auteur}}</td>
                         <td>{{food.name}}</td>
                         <td>{{food.description}}</td>
-                        <td><button (click)="handleDelete(food)" class="btn btn-danger">Supprimer </button></td>
+                        <td><button (click)="handleDelete(food)" class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
                     </tr>
                 </tbody>
             </table>
@@ -43,7 +46,7 @@
                             <td>{{user.name}}</td>
                             <td>{{user.surname}}</td>
                             <td>{{user.email}}</td>
-                            <td><button  class="btn btn-danger"><i class="bi bi-trash"></i> </button></td>
+                            <td><button (click)="handleDeleteUser(user)"  class="btn btn-danger"><i class="bi bi-trash"></i> </button></td>
                         </tr>
                     </tbody>
                 </table>

@@ -1,4 +1,4 @@
 export class Comment{
-    auteur?:string;
+    auteurCom?:string;
     content!:string;
 }
