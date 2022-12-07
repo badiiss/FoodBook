@@ -26,7 +26,7 @@ export class AuthentificationService {
 
   public login(username:string,password:string):Observable<User>{
  let user = this.users.find(u=>u.username==username);
- if(!user)return throwError(()=> new Error("User not found"));
+ if(!user)return throwError(()=> new Error("Identifiant Erroné"));
  if(user.password!==password){
   return throwError(()=> new Error("Mot de passe erroné"));
  }return of(user); 

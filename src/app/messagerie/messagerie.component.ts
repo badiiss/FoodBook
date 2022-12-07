@@ -16,4 +16,13 @@ export class MessagerieComponent implements OnInit {
     this.messages = this.mes.getAll();
   }
 
-}
+  delete(message: Message) {
+   console.log(this.messages);
+    let index = this.messages.indexOf(message);
+    this.messages.splice(index, 1);
+    alert("Message Supprimé");
+    console.log(this.messages);
+      }
+    }
+  
+

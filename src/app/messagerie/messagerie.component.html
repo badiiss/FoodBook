@@ -1,3 +1,6 @@
+<div id="titre" class="container">
+    <h3>Messagerie </h3>
+</div>
 <div class="container">
 
         <div class="card">
@@ -19,7 +22,8 @@
                             <td>{{food.content}}</td>
                             <td>{{food.date}}</td>
                             <td><button class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
-                            <td><button class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
+                            <td><button  (click)="delete(food)" class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
+                            
                         </tr>
                     </tbody>
                 </table>
