@@ -1,0 +1,53 @@
+<p>admin works!</p>
+<div class="container">
+    <details open>
+        <summary>Publicatins</summary>
+    <div class="card">
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Auteur</th> <th>Titre</th> <th>Description</th><th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let food of foods">
+                        <td>{{food.auteur}}</td>
+                        <td>{{food.name}}</td>
+                        <td>{{food.description}}</td>
+                        <td><button (click)="handleDelete(food)" class="btn btn-danger">Supprimer </button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </details>
+
+    <details>
+        <summary>Utilisateurs</summary>
+        <div class="card">
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Pseudo</th>
+                            <th>Nom</th>
+                            <th>Prenom</th>
+                            <th>E-Mail</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of users">
+                            <td>{{user.username}}</td>
+                            <td>{{user.name}}</td>
+                            <td>{{user.surname}}</td>
+                            <td>{{user.email}}</td>
+                            <td><button  class="btn btn-danger"><i class="bi bi-trash"></i> </button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </details>
+</div>

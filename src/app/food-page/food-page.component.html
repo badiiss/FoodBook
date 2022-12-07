@@ -10,7 +10,7 @@
             </span>
             <div class="author">
                 Auteur : <b>{{food.auteur}}</b>
-            <button id="supp" *ngIf="authservice.isAuthentificated()" (click)="handleDelete()">Supprimer le post </button>
+            <button id="supp" *ngIf="authservice.isAuthentificated() && canDelete()" (click)="handleDelete()">Supprimer le post </button>
 
             </div>
         </div>
@@ -19,7 +19,6 @@
             <span>
             {{food.description}}
             </span>
-            <app-comments></app-comments>
         </div>
         <div>
 
@@ -29,4 +28,5 @@
 
 
     </div>
+    <app-comments></app-comments>
 </div>

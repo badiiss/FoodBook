@@ -6,11 +6,10 @@
     <nav>
         <ul>
             <li>
-                
+                <a *ngIf="authservice.hasRole('admin')" href="#" routerLink="/admin"> Admin</a>
                 <a *ngIf="!authservice.isAuthentificated()"href="#" routerLink="/login"> Se connecter</a>
                 <a *ngIf="!authservice.isAuthentificated()" href="#" routerLink="/register"> S'inscrire</a>
                 <a *ngIf="authservice.isAuthentificated()" href="#" >Profil</a>
-                <a href="#" routerLink="/plats"> Posts </a>
                 <a *ngIf="authservice.isAuthentificated()" href="#"> {{authservice.authentficatedUser!.username}}</a>
                 <a *ngIf="authservice.isAuthentificated()" (click)="handleLogout()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-square" viewBox="0 0 16 16">

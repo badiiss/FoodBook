@@ -1,9 +1,9 @@
 <div>
     
     <ng-container *ngIf="authservice.isAuthentificated()">
-    <button  id="add" (click)="add()"> Add a new post</button></ng-container>
+    <button  id="add" (click)="add()"> Ajouter une recette</button></ng-container>
     
-    <input [ngClass]="{'conn':authservice.isAuthentificated(),'disc':!authservice.isAuthentificated() }"  type="text" placeholder="Search" [(ngModel)]="searchTerm" (change)="search()">
-    <button (click)="search()">Search</button>
+    <input [ngClass]="{'conn':authservice.isAuthentificated(),'disc':!authservice.isAuthentificated() }"  type="text" placeholder="Rechercher ... " [(ngModel)]="searchTerm" (change)="search()">
+    <button (click)="search()">Rechercher</button>
 </div>
 

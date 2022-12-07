@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminComponent } from './admin/admin.component';
 import { FoodPageComponent } from './food-page/food-page.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path:'tag/:tag' , component:HomeComponent},
   { path: 'food/:id', component: FoodPageComponent },
   { path: 'newpost', component: NewpostComponent },
-  {path : 'register', component:RegisterComponent}
+  { path: 'register', component: RegisterComponent },
+  {path : 'admin' , component :AdminComponent}
 ];
 
 

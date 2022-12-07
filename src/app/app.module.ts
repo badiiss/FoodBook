@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { NewpostComponent } from './newpost/newpost.component';
 import { RegisterComponent } from './register/register.component';
 import { CommentsComponent } from './comments/comments.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CommentsComponent } from './comments/comments.component';
     LoginComponent,
     NewpostComponent,
     RegisterComponent,
-    CommentsComponent
+    CommentsComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

@@ -9,12 +9,19 @@ import { Observable, of, throwError } from 'rxjs';
 export class AuthentificationService {
 
   users : User[]=[];
-  authentficatedUser : User | undefined;
+  authentficatedUser? : User ;
   constructor() { 
-    this.users.push({userId: UUID.UUID(), username:"badis",password:"badis",roles : ["user"]});
-    this.users.push({userId: UUID.UUID(), username:"asus",password:"badis",roles : ["user"]});
-    this.users.push({userId: UUID.UUID(), username:"zohra",password:"badis",roles : ["user","admin"]});
+    this.users.push({userId: UUID.UUID(), username:"badis",password:"badis",roles : ["user","admin"]});
+    this.users.push({userId: UUID.UUID(), username:"anis",password:"badis",roles : ["user"]});
+    this.users.push({ userId: UUID.UUID(), username: "hicham", password: "badis", roles: ["user"] });
+    this.users.push({ userId: UUID.UUID(), username: "ion", password: "badis", roles: ["user"] });
+     this.users.push({userId: UUID.UUID(), username:"salwa",password:"badis",roles : ["user"]});
+
   
+  }
+
+  getAll() {
+    return this.users;
   }
 
   public login(username:string,password:string):Observable<User>{
@@ -32,10 +39,13 @@ localStorage.setItem("authUser",JSON.stringify({username:user.username, roles : 
 return of(true);
 }
 
-/*
-public hasRole(role : string):boolean {
- return this.authentficatedUser!.roles.includes(role);
-}*/
+
+  public hasRole(role: string): boolean {
+    if (this.authentficatedUser?.roles) {
+     return this.authentficatedUser.roles.includes(role);
+    }
+    return false;
+}
 
 public isAuthentificated (){
   return this.authentficatedUser != undefined;

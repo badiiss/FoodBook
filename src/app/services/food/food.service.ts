@@ -8,7 +8,7 @@ import { Tag } from 'src/app/shared/models/Tags';
 export class FoodService {
 
   private foods !: Array<Food>;
-
+  public food !: Food;
   constructor() {
     this.foods = [
       {
@@ -99,12 +99,18 @@ export class FoodService {
       
     ]
   }
+
+  getAuteur() {
+    return this.food.auteur
+  }
   // TODO 
   public addNewPost(post: Food): Observable<Food>{
     this.foods.push(post);
     console.log(post);
     return of(post);
   }
+  
+  
 
   public deletPost(id: number): Observable<boolean> {
     this.foods = this.foods.filter(food => food.id != id);

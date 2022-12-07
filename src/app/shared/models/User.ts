@@ -8,4 +8,5 @@ export class User {
     password!: string;
     picture?: string;
     roles?: String[];
+    email?: string;
 }

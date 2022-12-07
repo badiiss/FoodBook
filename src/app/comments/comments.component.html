@@ -1,15 +1,19 @@
 <div class="card">
+    <div class="card-body">
+    <h5 class="card-title">Commentaires : </h5>
     <div class="com">
-        <p>Commentaires : </p>
-        <input [(ngModel)]= "comment">
-        <button (click)="post()">Commenter</button>
+              <form [formGroup]="commentFormGroup" (ngSubmit)="post()">
+            
+                    <input type="text" formControlName="content" class="form-control">
+                    <button [disabled]="!commentFormGroup.valid" class="btn btn-primary btn-lg btn-block">Commenter</button>           
+                </form>
+     </div>
+
+        <div *ngFor="let comment of postComment">
+            <li> {{comment.auteur}}  : {{comment.content}}</li>
         </div>
-   
-   
-<div *ngFor="let comment of postComment">
-<li>{{comment}}</li>
+        </div>
 </div>
 
 
 
-</div>

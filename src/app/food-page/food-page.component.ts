@@ -32,4 +32,8 @@ export class FoodPageComponent implements OnInit {
     })
   }
 
+  canDelete() {
+    return this.authservice.getUsername == this.foodService.getAuteur;
+  }
+
 }

@@ -1,21 +1,28 @@
+.com {
+    margin-top: 2rem;
+    clear: none;
+}
+
 .card button {
     color: grey;
     height: 3rem;
     width: 10rem;
     font-size: 1rem;
-    border-radius: 0 10rem 10rem 0;
+    border-radius: 10rem 10rem 10rem 10rem;
     border: none;
     background-color: red;
     color: white;
     opacity: .5;
     outline: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 div input {
-    border-radius: 10rem 0 0 10rem;
+    border-radius: 10rem 10rem 10rem 10rem;
     border: none;
     height: 3rem;
-    width: 20rem;
+    width: 39rem;
     background-color: #f1f1f1;
     padding: 1.2rem;
     font-size: 1rem;
@@ -31,5 +38,5 @@ div input {
 .card {
     margin-top: 100px;
     margin-bottom: 100px;
-    ;
+    
 }
