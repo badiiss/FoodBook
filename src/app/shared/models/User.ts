@@ -9,4 +9,5 @@ export class User {
     picture?: string;
     roles?: String[];
     email?: string;
+    nbPub?: number;
 }

@@ -1,3 +1,4 @@
+<app-header> </app-header>
 <div id="titre" class="container">
     <h3>Messagerie </h3>
 </div>
@@ -8,9 +9,9 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>Auteur</th>
+                            <th>Expéditeur</th>
                             <th>Message</th>
-                            <th>Date de reception</th>
+                            <th>Reçu le </th>
                             <th>Repondre</th>
                             <th>Supprimer</th>
                             
@@ -21,7 +22,7 @@
                             <td>{{food.sender}}</td>
                             <td>{{food.content}}</td>
                             <td>{{food.date}}</td>
-                            <td><button class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
+                            <td><button class="btn btn-light"><i class="bi bi-reply-fill"></i></button></td>
                             <td><button  (click)="delete(food)" class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
                             
                         </tr>

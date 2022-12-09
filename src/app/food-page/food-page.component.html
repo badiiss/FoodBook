@@ -1,16 +1,17 @@
+<app-header> </app-header>
 
-<div class="container">
+<div id="page" class="container">
     <img [src]="food.imageUrl" [alt]="food.name">
 
     <div class="details">
         <div class="header">
             <span class="name">
-                {{food.name}} par {{food.auteur}}
+                {{food.name}}   <ngb-rating [max]="5" [(rate)]="food.stars"></ngb-rating>
                 
             </span>
             <div class="author">
                 Auteur : <b>{{food.auteur}}</b>
-            <button id="supp" *ngIf="authservice.isAuthentificated() && canDelete()" (click)="handleDelete()">Supprimer le post </button>
+            <button id="supp" *ngIf="authservice.isAuthentificated() && canDelete()==true" (click)="handleDelete()">Supprimer le post </button>
 
             </div>
         </div>
@@ -19,6 +20,9 @@
             <span>
             {{food.description}}
             </span>
+            <div class="stars">
+                
+            </div>
         </div>
         <div>
 

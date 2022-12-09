@@ -8,11 +8,11 @@ export class MessagerieService {
   messages : Message[]=[];
 
   constructor() { 
-    this.messages.push({ sender: "Badis", content: "Hellow world " });
-    this.messages.push({ sender: "Badis", content: "hiiiii" });
-    this.messages.push({ sender: "Badis", content: "bonjouuuur" });
-    this.messages.push({ sender:"Badis",content:"saluuut"});
-    this.messages.push({ sender:"Badis",content:"saluuuuuuuuuuuuut"});
+    this.messages.push({ sender: "Badis", content: "Praesent molestie augue eu nulla porttitor posuere. Praesent consequat tellus in elit tincidunt ornare. Pellentesque. ", date:"09/10/2022" });
+    this.messages.push({ sender: "Olivier", content: "Praesent molestie augue eu nulla porttitor posuere. Praesent consequat tellus in elit tincidunt ornare. Pellentesque.", date:"03/09/2022" });
+    this.messages.push({ sender: "Antoine", content: "bonjour", date:"15/11/2022" });
+    this.messages.push({ sender:"Ousmane",content:"saluuut", date:"09/12/2022"});
+    this.messages.push({ sender:"Kylian",content:"salut, ça va?", date:"03/12/2022"});
   
   }
 

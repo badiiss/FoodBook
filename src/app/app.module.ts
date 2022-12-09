@@ -16,6 +16,8 @@ import { RegisterComponent } from './register/register.component';
 import { CommentsComponent } from './comments/comments.component';
 import { AdminComponent } from './admin/admin.component';
 import { MessagerieComponent } from './messagerie/messagerie.component';
+import { FooterComponent } from './footer/footer.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { MessagerieComponent } from './messagerie/messagerie.component';
     RegisterComponent,
     CommentsComponent,
     AdminComponent,
-    MessagerieComponent
+    MessagerieComponent,
+    FooterComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -1,13 +1,26 @@
-<div class="container">
-    <div class="col-md-6 offset-3">
-        <div class="card">
+<header>
+    <div id="header">
+        <a id="link" href="#" routerLink="" class="logo">Food<i>In</i> ! </a>
+
+       
+
+    </div>
+
+</header>
+
+<div class="badis">
+
+    <div class="container">
+    
+     <div class="col-md-6 offset-3">
+         <div class="card">
             <!-- LOGIIIIIIIIIIIIIIIIIN-->
             <div class="card-header">
                 <label id="label">Authentification</label> 
                
             </div>
             <div class="text-danger" *ngIf="errorMessage">{{errorMessage}}</div>
-            <div class="card-body">
+                <div class="card-body">
                
                 <form [formGroup]="userFormGroup" (ngSubmit)="handleLogin()">
                     <div class="mb-3">
@@ -19,6 +32,7 @@
                         <input type="password" formControlName="password" class="form-control">
                     </div>
                     <button [disabled]="!userFormGroup.valid" class="btn btn-primary btn-lg btn-block" >Login</button>
+                    <a href="/register" > Vous n'avez pas de compte ? Inscrivez vous </a>
                 </form>
              
             </div>
@@ -27,3 +41,7 @@
             
         </div>
     </div>
+    </div>
+
+
+  

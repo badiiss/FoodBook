@@ -6,18 +6,20 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MessagerieComponent } from './messagerie/messagerie.component';
 import { NewpostComponent } from './newpost/newpost.component';
+import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
-  {path:'', component:HomeComponent},
-  {path :'login', component:LoginComponent},
+  {path:'home', component:HomeComponent},
+  {path :'', component:LoginComponent},
   {path:'search/:searchTerm', component:HomeComponent},
   {path:'tag/:tag' , component:HomeComponent},
   { path: 'food/:id', component: FoodPageComponent },
   { path: 'newpost', component: NewpostComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'admin', component: AdminComponent },
-  {path : 'inbox', component: MessagerieComponent}
+  { path: 'inbox', component: MessagerieComponent },
+  {path: 'profil/:username', component : ProfileComponent}
 ];
 
 

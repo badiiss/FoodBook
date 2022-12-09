@@ -1,10 +1,14 @@
+<app-header> </app-header>
 <app-search></app-search>
-
-<h1>N OUBLIE PAS DE TERMINER LES COMMENTAIRES ET MODIFIER MESSAGE</h1>
+<!--
+<h1>N OUBLIE PAS DE TERMINER LES COMMENTAIRES ET MODIFIER MESSAGE +  + AJOUTER UNE PAGE POUR CONNECTER AVANT DACCEDER AU SITE
+    COEUR AJOUTER SI IL EST CONNECTER + footer utiliser font awsome + profil amis + background +
+</h1>
+-->
 <ul>
     <li *ngFor="let food of foods">
        <a routerLink="/food/{{food.id}}">
-         <img src="{{food.imageUrl}}" alt="">
+         <img src="{{food.imageUrl}}" width="400" height="250" alt="">
          <div class="content">
             <div class="name">
                 {{food.name}}
