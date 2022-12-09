@@ -11,12 +11,12 @@ export class AuthentificationService {
   users: User[] = [];
   authentficatedUser? : User ;
   constructor() { 
-    this.users.push({userId: UUID.UUID(),nbPub:3,email :"badis@gmail.com",surname :"Bouakaz",name :"Badis", username:"Badis",password:"badis",roles : ["user","admin"]});
-    this.users.push({userId: UUID.UUID(),nbPub:23,email :"anis@outlook.com",surname :"Kadri",name :"Anis", username:"anis",password:"badis",roles : ["user"]});
-    this.users.push({ userId: UUID.UUID(),nbPub:18,email :"hicham@uga.com",surname :"Neghiz",name :"Hicham", username: "hicham", password: "badis", roles: ["user"] });
-    this.users.push({ userId: UUID.UUID(),nbPub:0,email :"ion@dciss.com",surname :"Velesco",name :"Ion", username: "ion", password: "badis", roles: ["user"] });
-    this.users.push({ userId: UUID.UUID(),nbPub:11,email :"salwa@wic.com",surname :"Benkaour",name :"Salwa", username: "salwa", password: "badis", roles: ["user"] });
-    this.users.push({userId: UUID.UUID(),nbPub:53,email :"ouma@gmail.com",surname :"Bouakaz",name :"Oumaima", username:"oumaima",password:"badis",roles : ["user"]});
+    this.users.push({userId: UUID.UUID(),photo:'/assets/images/profil.jpg',nbPub:3,email :"badis@gmail.com",surname :"Bouakaz",name :"Badis", username:"Badis",password:"badis",roles : ["user","admin"]});
+    this.users.push({userId: UUID.UUID(),photo:'/assets/images/profil.jpg',nbPub:23,email :"anis@outlook.com",surname :"Kadri",name :"Anis", username:"anis",password:"badis",roles : ["user"]});
+    this.users.push({ userId: UUID.UUID(),photo:'/assets/images/profil.jpg',nbPub:18,email :"hicham@uga.com",surname :"Neghiz",name :"Hicham", username: "hicham", password: "badis", roles: ["user"] });
+    this.users.push({ userId: UUID.UUID(),photo:'/assets/images/profil.jpg',nbPub:0,email :"ion@dciss.com",surname :"Velesco",name :"Ion", username: "ion", password: "badis", roles: ["user"] });
+    this.users.push({ userId: UUID.UUID(),photo:'/assets/images/profil.jpg',nbPub:11,email :"salwa@wic.com",surname :"Benkaour",name :"Salwa", username: "salwa", password: "badis", roles: ["user"] });
+    this.users.push({userId: UUID.UUID(),photo:'/assets/images/profil.jpg',nbPub:53,email :"ouma@gmail.com",surname :"Bouakaz",name :"Oumaima", username:"oumaima",password:"badis",roles : ["user"]});
 
   
   }
@@ -65,6 +65,7 @@ public isAuthentificated (){
   public logOut() : Observable<boolean>{
     this.authentficatedUser = undefined;
     localStorage.removeItem("authUser");
+    alert("Vous etes maintenant deconnecté ")
     return of(true);
 
   }

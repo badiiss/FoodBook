@@ -23,7 +23,8 @@ export class AdminComponent implements OnInit {
   }
 
   handleDelete(food: Food) {
-    console.log(this.foods);
+    if (confirm("Etes vous sur de vouloir supprimer cette publication ?")) {
+       console.log(this.foods);
     let index = this.foods.indexOf(food);
     this.foods.splice(index, 1);
     console.log(this.foods);
@@ -33,20 +34,24 @@ export class AdminComponent implements OnInit {
         this.router.navigateByUrl("/admin")
       }
     })
+
+    }
+   
   }
 
   handleDeleteUser(user: User) {
-    console.log(this.users);
-    let index = this.users.indexOf(user);
-    this.users.splice(index, 1);
-    alert("Utilsateur Supprimé");
-    console.log(this.users);/*
+    if (confirm("Etes vous sur de vouloir supprimer cet utilisateur ?")) {
+      console.log(this.users);
+      let index = this.users.indexOf(user);
+      this.users.splice(index, 1);
+      alert("Utilsateur Supprimé");
+      console.log(this.users);/*
     this.foodService.deletPost(user.username).subscribe({
       next: () => {
         alert("Post Supprimé")
         this.router.navigateByUrl("/admin")
       }
     })*/
+    }
   }
-
 }

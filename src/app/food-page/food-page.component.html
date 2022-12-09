@@ -7,10 +7,12 @@
         <div class="header">
             <span class="name">
                 {{food.name}}   <ngb-rating [max]="5" [(rate)]="food.stars"></ngb-rating>
-                
+           
             </span>
             <div class="author">
-                Auteur : <b>{{food.auteur}}</b>
+               <div class="authorElement">Auteur : <b>{{food.auteur}}</b></div>
+               <div class="authorElement"><i class="btn btn-outline-dark" (click)="open(content)" class="bi bi-envelope"></i>
+            </div> 
             <button id="supp" *ngIf="authservice.isAuthentificated() && canDelete()==true" (click)="handleDelete()">Supprimer le post </button>
 
             </div>
@@ -34,3 +36,25 @@
     </div>
     <app-comments></app-comments>
 </div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Nouveau Message</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="form-group">
+                
+                <div class="input-group">
+                    <input type="text" id="message" class="form-control">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Envoyer</button>
+    </div>
+</ng-template>

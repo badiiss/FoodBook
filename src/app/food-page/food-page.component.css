@@ -7,6 +7,17 @@
     margin-bottom: 1rem;
 }
 
+.author {
+    display: flex;
+    
+}
+.authorElement {
+    flex: auto;
+        
+        margin: 10px;
+}
+
+
 ngb-rating {
 
     font-size: 20px;

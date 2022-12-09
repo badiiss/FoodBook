@@ -6,12 +6,15 @@
         <div class="card">
     <div class="card-header"> Profil </div>
     <div class="card-body">
+        <img [src]="user.photo">
         <table>
             <tbody>
+                
                 <tr>
                     <th>Pseudo</th>
                     <td>{{user.username}}</td>
                 </tr>
+               
             <tr>
                 <th>Nom</th>
                 <td>{{user.name}}</td>
@@ -19,6 +22,7 @@
             <tr>
                 <th>Prenom</th>
                 <td>{{user.surname}}</td>
+
             </tr>
             <tr>
                 <th>Email</th>
@@ -32,6 +36,7 @@
                 <th>Supprimer le compte</th>
                 <td><button (click)="handleDeleteUser(user)" class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
             </tr>
+
             
              
             </tbody>

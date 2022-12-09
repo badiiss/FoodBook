@@ -10,4 +10,5 @@ export class User {
     roles?: String[];
     email?: string;
     nbPub?: number;
+    photo?: string;
 }

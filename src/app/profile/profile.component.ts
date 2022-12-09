@@ -22,13 +22,18 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     this.users = this.authservice.getAll();
   }
-   handleDeleteUser(user: User) {
-    console.log(this.users);
-    let index = this.users.indexOf(user);
+  handleDeleteUser(user: User) {
+    if (confirm("Etes-vous sur de vouloir supprimer votre compte ?")) {
+      let index = this.users.indexOf(user);
     this.users.splice(index, 1);
     alert("Utilsateur Supprimé");
      console.log(this.users);
-     this.router.navigateByUrl('/home'); /*
+     this.router.navigateByUrl('/'); 
+
+    }
+     
+   
+    /*
     
     this.foodService.deletPost(user.username).subscribe({
       next: () => {
