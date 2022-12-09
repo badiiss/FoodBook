@@ -1,16 +1,16 @@
 
 <header>
 <div class="container">
-    <a href="#" routerLink="" class="logo">Food<i>In</i> ! </a>
+    <a  href="#" routerLink="" class="logo">Food<i>In</i> ! </a>
     
     <nav>
         <ul>
             <li>
-                <a *ngIf="authservice.hasRole('admin')" href="#" routerLink="/admin"> Admin</a>
-           <!--     <a *ngIf="!authservice.isAuthentificated()"href="#" routerLink="/login"> Se connecter</a>
-                <a *ngIf="!authservice.isAuthentificated()" href="#" routerLink="/register"> S'inscrire</a>-->
+                <a *ngIf="authservice.hasRole('admin')" href="#" routerLink="/admin/{{authservice.authentficatedUser!.username}}"> Admin</a>
+            <a *ngIf="!authservice.isAuthentificated()"href="#" routerLink="/login"> Se connecter</a>
+                <a *ngIf="!authservice.isAuthentificated()" href="#" routerLink="/register"> S'inscrire</a>
                 
-                <a *ngIf="authservice.isAuthentificated()" href="/inbox" >Messagerie</a>
+                <a *ngIf="authservice.isAuthentificated()" href="#" routerLink="/inbox" >Messagerie</a>
                 <a routerLink="/profil/{{authservice.authentficatedUser!.username}}" *ngIf="authservice.isAuthentificated()" > {{authservice.authentficatedUser!.username}}</a>
                 <a *ngIf="authservice.isAuthentificated()" (click)="handleLogout()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-square" viewBox="0 0 16 16">

@@ -14,8 +14,10 @@
 .authorElement {
     flex: auto;
         
-        margin: 10px;
+        margin: 5px;
 }
+
+
 
 
 ngb-rating {

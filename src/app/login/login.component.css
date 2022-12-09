@@ -29,11 +29,15 @@ a.logo {
 
 .container {
     margin-top: 50px;
-    
+    background-image: url("/assets/images/falafel.jpg");
+        width: 100%;
+        height: 100%;
     
 }
 .badis {
 background-image: url("/assets/images/falafel.jpg");
+width: 100%;
+height: 100%;
 
 }
 

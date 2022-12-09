@@ -1,5 +1,4 @@
 
-<app-header></app-header>
 <div class="container">
 
     <div class="col-md-6 offset-3">
@@ -13,25 +12,26 @@
                 <tr>
                     <th>Pseudo</th>
                     <td>{{user.username}}</td>
-                </tr>
+<td><i class="bi bi-pencil-square" style="margin-left: 25px;"></i></td>                </tr>
                
             <tr>
                 <th>Nom</th>
                 <td>{{user.name}}</td>
+                <td><i class="bi bi-pencil-square" style="margin-left: 25px;"></i></td>
             </tr>
             <tr>
                 <th>Prenom</th>
                 <td>{{user.surname}}</td>
-
+<td><i class="bi bi-pencil-square" style="margin-left: 25px;"></i></td>
             </tr>
             <tr>
                 <th>Email</th>
                 <td>{{user.email}}</td>
-            </tr>
+<td><i class="bi bi-pencil-square" style="margin-left: 25px;"></i></td>            </tr>
             <tr>
                 <th>Nombre de publication</th>
                 <td>{{user.nbPub}}</td>
-            </tr>
+<td><i class="bi bi-pencil-square" style="margin-left: 25px;"></i></td>            </tr>
             <tr>
                 <th>Supprimer le compte</th>
                 <td><button (click)="handleDeleteUser(user)" class="btn btn-danger"><i class="bi bi-trash"></i></button></td>

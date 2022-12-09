@@ -9,15 +9,16 @@ import { NewpostComponent } from './newpost/newpost.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 
+
 const routes: Routes = [
-  {path:'home', component:HomeComponent},
-  {path :'', component:LoginComponent},
+  {path:'', component:HomeComponent},
+  {path :'login', component:LoginComponent},
   {path:'search/:searchTerm', component:HomeComponent},
   {path:'tag/:tag' , component:HomeComponent},
   { path: 'food/:id', component: FoodPageComponent },
   { path: 'newpost', component: NewpostComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'admin', component: AdminComponent },
+  { path: 'admin/:username', component: AdminComponent },
   { path: 'inbox', component: MessagerieComponent },
   {path: 'profil/:username', component : ProfileComponent}
 ];

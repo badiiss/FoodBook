@@ -4,4 +4,19 @@
 #titre {
     margin-top: 2rem;
     text-align: center;
+    
+}
+
+
+.itemBut {
+    flex: auto;
+    margin-left: 100px;
+    margin-right: 0;
+    float: left;
+    margin-top: 50px;
+}
+.itemText {
+flex : auto;
+margin-left:0;
+float: center;
 }

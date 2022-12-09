@@ -1,7 +1,9 @@
-<app-header> </app-header>
 <div id="titre" class="container">
-    <h3>Messagerie </h3>
+    
+   <div class="itemText"><h3>Messagerie </h3></div>   
 </div>
+
+
 <div class="container">
 
         <div class="card">
@@ -18,12 +20,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let food of messages ">
-                            <td>{{food.sender}}</td>
-                            <td>{{food.content}}</td>
-                            <td>{{food.date}}</td>
-                            <td><button class="btn btn-light"><i class="bi bi-reply-fill"></i></button></td>
-                            <td><button  (click)="delete(food)" class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
+                        <tr *ngFor="let message of messages ">
+                            <td>{{message.sender}}</td>
+                            <td>{{message.content}}</td>
+                            <td>{{message.date}}</td>
+                            <td><button (click)="open(reply)" class="btn btn-light"><i class="bi bi-reply-fill"></i></button></td>
+                            <td><button  (click)="delete(message)" class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
                             
                         </tr>
                     </tbody>
@@ -31,3 +33,26 @@
             </div>
         </div>
 
+<ng-template #reply let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Votre réponse</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="false">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="form-group">
+
+                <div class="mb-3">
+                    <textarea placeholder="Votre réponse" type="text" id="message" class="form-control"
+                        rows="3"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Repondre
+           </button>
+    </div>
+</ng-template>
