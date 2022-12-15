@@ -38,6 +38,7 @@ export class RegisterComponent implements OnInit {
     this.authService.register(user).subscribe({
       next: () => {
         alert("Profil Crée");
+        this.router.navigateByUrl('');
         this.registerFormGroup.reset;
       }, error: err => {
         
@@ -46,7 +47,7 @@ export class RegisterComponent implements OnInit {
     if (this.registerFormGroup.invalid) {
       return;
     }
-    console.log(this.registerFormGroup.value);
+   // console.log(this.registerFormGroup.value);
     
   }
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FoodService } from '../services/food/food.service';
+import { Router } from '@angular/router';
+import { AuthentificationService } from '../services/authentification.service';
 
 @Component({
   selector: 'app-newpost',
@@ -11,7 +13,7 @@ export class NewpostComponent implements OnInit {
 
   postFormGroup!: FormGroup;
 
-  constructor(private fb : FormBuilder , private foodservice : FoodService) { }
+  constructor( private authService: AuthentificationService,private router: Router,private fb : FormBuilder , private foodservice : FoodService) { }
 
   ngOnInit(): void {
     this.postFormGroup = this.fb.group({
@@ -21,6 +23,7 @@ export class NewpostComponent implements OnInit {
       tags : this.fb.control([]),
       imageUrl: this.fb.control(""),
       origins: this.fb.control([]),
+      auteur: this.authService.authentficatedUser?.username,
       
     })
       
@@ -33,6 +36,7 @@ export class NewpostComponent implements OnInit {
       next: () => {
         alert("Poste Publié");
         this.postFormGroup.reset;
+        this.router.navigateByUrl('');
       }, error: err => {
         
       }

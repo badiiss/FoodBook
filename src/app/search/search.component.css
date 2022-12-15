@@ -4,9 +4,13 @@ div {
     margin-top: 3rem;
     margin-bottom: 1.5rem;
 }
+
+#add {
+    justify-content: left;
+}
+
 .conn {
     
-         /*   border-radius: 10rem 0 0 10rem;*/
             border: none;
             height: 3rem;
             width: 20rem;
@@ -17,6 +21,7 @@ div {
             outline: none;
         
 }
+
 
 .disc {
    border-radius: 10rem 0 0 10rem;

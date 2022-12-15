@@ -11,8 +11,8 @@
             </span>
             <div class="author">
                <div class="authorElement">Auteur : <b>{{food.auteur}}</b></div>
-               <div class="authorElement"><i class="btn btn-outline-dark" (click)="open(content)" class="bi bi-envelope"></i></div>
-                <div class="authorElement"><i class="btn btn-outline-dark" (click)="open(addfriend)"  class="bi bi-person-add"></i></div>
+               <div *ngIf="authservice.isAuthentificated()" class="authorElement"><i class="btn btn-outline-dark" (click)="open(content)" class="bi bi-envelope"></i></div>
+                <div *ngIf="authservice.isAuthentificated()" class="authorElement"><i class="btn btn-outline-dark" (click)="open(addfriend)"  class="bi bi-person-add"></i></div>
 
             
             <button id="supp" *ngIf="authservice.isAuthentificated() && canDelete()==true" (click)="handleDelete()">Supprimer le post </button>
@@ -57,7 +57,7 @@
         </form>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Envoyer à {{food.auteur}}</button>
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Envoyer un message à {{food.auteur}}</button>
     </div>
 </ng-template>
 
